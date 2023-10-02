@@ -1,0 +1,2 @@
+#!/bin/bash
+sdiff /etc/passwd /etc/hosts
