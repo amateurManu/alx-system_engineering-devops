@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $NUM.{00..99}
+echo "%.2f" $NUM | sort
