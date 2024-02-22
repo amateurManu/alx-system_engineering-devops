@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script repeats a message using until loop
+i=0
+until [ $i -gt 9 ]
+do
+	echo "Best School"
+	((i++))
+done
