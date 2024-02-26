@@ -10,7 +10,7 @@ do
 	home=$(echo "$line" | cut -f 6 -d ':')
 	command=$(echo "$line" | cut -f 7 -d ':')
 
-	echo -n "The server $username is part of the $groupID gang, "
+	echo -n "The user $username is part of the $groupID gang, "
 	echo -n "lives in $home and rides $command."
 	echo -n "$userID's place is protected by the passcode $password, "
 	echo -n "more info about the user here: $userINFO"
