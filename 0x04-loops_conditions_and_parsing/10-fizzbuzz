@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Script that does the Fizzbuzz challenge
+for i in {1..100}
+do
+	if [ $((i % 5)) -eq 0 ] && [ $((i % 3)) -eq 0 ]
+	then
+		echo "Fizzbuzz"
+	elif [ $((i % 5)) -eq 0 ]
+	then
+		echo "Buzz"
+	elif [ $((i % 3)) -eq 0 ]
+	then
+		echo "Fizz"
+	else
+		echo "$i"
+	fi
+done
