@@ -1,0 +1,11 @@
+# Configures the configuration file for local
+# SSH client so that connection is possible 
+# without a password
+
+Host *
+	SendEnv LANG LC_*
+	HashKnownHosts yes
+	GSSAPIAuthentication yes
+	GSSAPIDelegateCredentials no
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
