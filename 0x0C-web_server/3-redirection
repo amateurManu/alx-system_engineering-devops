@@ -3,5 +3,5 @@
 apt-get -y update
 apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
-sed -i '/server_name _;/a \ \ \ \ location /redirect_me {\n\ \ \ \ \ \ \ \ return 301 https:github.com/amateurManu;\n\ \ \ \ }' /etc/nginx/sites-available/default
+sed -i '/server_name _;/a \\tlocation /redirect_me {\n\t\treturn 301 https:github.com/amateurManu;\n\t }' /etc/nginx/sites-available/default
 service nginx start
