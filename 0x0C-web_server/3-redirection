@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Script that installs web server and redirects /redirect_me
+apt-get -y update
+apt-get -y install nginx
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sed -i '/server_name _;/a \\tlocation /redirect_me {\n\t\treturn 301 https:github.com/amateurManu;\n\t }' /etc/nginx/sites-available/default
+service nginx start
