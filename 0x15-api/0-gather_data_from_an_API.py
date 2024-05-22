@@ -8,10 +8,10 @@ if __name__ == "__main__":
 
     user = '{}users/{}'.format(url, sys.argv[1])
     res = requests.get(user)
-    json_out = res.json()
-    print("Employee {} is done with taks".format(json_out.get('name')), end="")
+    json_o = res.json()
+    print("Employee {} is done with tasks".format(json_o.get('name')), end="")
 
-    todo = '{}todos?userID={}'.format(url, sys.argv[1])
+    todo = '{}todos?userId={}'.format(url, sys.argv[1])
     res = requests.get(todo)
     tasks = res.json()
     l_task = []
