@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Script that installs web server and redirects /redirect_me
+apt-get -y update
+apt-get -y install nginx
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+sed -i '/server_name _;/a \\tlocation /redirect_me {\n\t\treturn 301 https:github.com/amateurManu;\n\t \n\t} \n\terror_page 404 /custom_404.html;\n\tadd_header X-Served-By \"$HOSTNAME\";' /etc/nginx/sites-available/default
+service nginx start
